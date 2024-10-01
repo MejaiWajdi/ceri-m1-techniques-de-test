@@ -1,6 +1,5 @@
-# This config was automatically generated from your source code
-# Stacks detected: deps:java:.
 version: 2.1
+
 jobs:
   test-java:
     docker:
@@ -22,19 +21,42 @@ jobs:
           key: cache-{{ checksum "/tmp/CIRCLECI_CACHE_KEY" }}
           paths:
             - ~/.m2/repository
-  deploy:
-    # This is an example deploy job, not actually used by the workflow
+
+  build:
     docker:
-      - image: cimg/base:stable
+      - image: cimg/openjdk:17.0
     steps:
-      # Replace this with steps to deploy to users
+      - checkout
       - run:
-          name: deploy
-          command: '#e.g. ./deploy.sh'
+          name: Build project
+          command: mvn package
+
+  publish-latest:
+    docker:
+      - image: cimg/openjdk:17.0
+    steps:
+      - checkout
+      - run:
+          name: Publish latest version
+          command: |
+            # Add commands to publish your package
+            echo "Publishing latest version"
+
 workflows:
+  version: 2
   build-and-test:
     jobs:
       - test-java
-    # - deploy:
-    #     requires:
-    #       - test-java
+
+  build-master:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only: master
+      - publish-latest:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
