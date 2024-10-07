@@ -39,7 +39,7 @@ jobs:
       - run:
           name: Publish latest version
           command: |
-            # Add commands to publish your package
+        
             echo "Publishing latest version"
 
 workflows:
