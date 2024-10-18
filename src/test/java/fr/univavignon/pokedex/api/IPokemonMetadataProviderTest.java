@@ -17,6 +17,7 @@ public class IPokemonMetadataProviderTest {
 
         // Stubbing the method call with expected parameter and return value
         when(pokemonMetadataProvider.getPokemonMetadata(0)).thenReturn(new PokemonMetadata(0, "Pikachu", 229, 174, 90));
+
     }
 
     @Test
@@ -34,4 +35,18 @@ public class IPokemonMetadataProviderTest {
         verify(pokemonMetadataProvider).getPokemonMetadata(0);
     }
 
+    @Test
+    public void testGetPokemonMetadataWithInvalidIndex() throws PokedexException {
+        // Définir un index invalide
+        int invalidIndex = -1;
+
+        // Configurer le mock pour lancer une PokedexException pour cet index
+        when(pokemonMetadataProvider.getPokemonMetadata(invalidIndex))
+                .thenThrow(new PokedexException("Invalid index"));
+
+        // Vérifier que l'exception est bien levée
+        assertThrows(PokedexException.class, () -> {
+            pokemonMetadataProvider.getPokemonMetadata(invalidIndex);
+        });
+    }
 }
