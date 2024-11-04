@@ -30,7 +30,7 @@ jobs:
             - ~/.m2/repository
       - codecov/upload:
           file: target/site/jacoco/jacoco.xml
-
+#Configurer Codecov dans CircleCI
 workflows:
   build-and-test:
     jobs:
