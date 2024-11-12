@@ -5,7 +5,8 @@
 **Prénom :** [Wajdi]  
 **Groupe :** [M1 ILSEN groupe classiques]
 
-![Statut CircleCI]([![CircleCI](https://circleci.com/status-badge/img/gh/MejaiWajdi/ceri-m1-techniques-de-test/tree/master.svg?style=svg)](https://undefined/status-badge/redirect/gh/MejaiWajdi/ceri-m1-techniques-de-test/tree/master))  
+![Statut CircleCI]([![CircleCI](https://circleci.com/gh/MejaiWajdi/ceri-m1-techniques-de-test/tree/master.svg?style=svg)](https://circleci.com/gh/MejaiWajdi/ceri-m1-techniques-de-test/tree/master)
+)  
 ![Couverture de Test](https://codecov.io/gh/MejaiWajdi/ceri-m1-techniques-de-test/graph/badge.svg?)
 
 
