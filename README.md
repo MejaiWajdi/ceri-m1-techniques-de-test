@@ -1,9 +1,9 @@
 # UCE Génie Logiciel Avancé : Techniques de tests
 
 
-**Nom :** [Mejai]  
-**Prénom :** [Wajdi]  
-**Groupe :** [M1 ILSEN groupe classiques]
+**Nom :** Mejai  
+**Prénom :** Wajdi  
+**Groupe :** M1 ILSEN groupe classiques
 
 ![Statut CircleCI](https://circleci.com/gh/MejaiWajdi/ceri-m1-techniques-de-test/tree/master.svg?style=svg)
 
