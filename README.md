@@ -1,5 +1,15 @@
 # UCE Génie Logiciel Avancé : Techniques de tests
 
+
+**Nom :** Mejai  
+**Prénom :** Wajdi  
+**Groupe :** M1 ILSEN groupe classiques
+
+![Statut CircleCI](https://circleci.com/gh/MejaiWajdi/ceri-m1-techniques-de-test/tree/master.svg?style=svg)
+
+![!Couverture de Test](https://codecov.io/gh/MejaiWajdi/ceri-m1-techniques-de-test/graph/badge.svg?)
+
+
 ## Introduction
 
 Vous allez à travers ces projet mettre en application une partie des aspects évoqués en cours vis à vis des techniques de tests.  
