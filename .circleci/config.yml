@@ -35,3 +35,6 @@ workflows:
   build-and-test:
     jobs:
       - test-java
+      - checkstyle:
+            requires:
+              - test-java
