@@ -24,19 +24,13 @@ jobs:
       - store_artifacts:
           path: target/site/jacoco
           destination: jacoco-report
-      - run:
-          name: Run Checkstyle
-          command: mvn checkstyle:checkstyle
-      - store_artifacts:
-          path: target/site/checkstyle.html
-          destination: checkstyle-report
       - save_cache:
           key: cache-{{ checksum "/tmp/CIRCLECI_CACHE_KEY" }}
           paths:
             - ~/.m2/repository
       - codecov/upload:
           file: target/site/jacoco/jacoco.xml
-
+#Configurer Codecov dans CircleCI
 workflows:
   build-and-test:
     jobs:
