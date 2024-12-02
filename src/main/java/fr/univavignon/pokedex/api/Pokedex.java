@@ -1,6 +1,5 @@
 package fr.univavignon.pokedex.api;
 
-import fr.univavignon.pokedex.api.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
