@@ -20,6 +20,7 @@ public class PokedexTest {
         pokedex = new Pokedex(metadataProvider);
     }
 
+
     @Test
     public void testAddPokemon() {
         Pokemon pokemon = pokemonFactory.createPokemon(0, 500, 50, 3000, 3);
