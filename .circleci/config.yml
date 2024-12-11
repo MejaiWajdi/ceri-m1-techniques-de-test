@@ -30,7 +30,35 @@ jobs:
             - ~/.m2/repository
       - codecov/upload:
           file: target/site/jacoco/jacoco.xml
-#Configurer Codecov dans CircleCI
+      - run:
+          name: Run Checkstyle
+          command: mvn checkstyle:checkstyle
+      - run:
+          name: Generate Checkstyle Badge
+          command: |
+            if [ ! -f target/checkstyle-result.xml ]; then
+              echo "Checkstyle result file not found!"
+              exit 1
+            fi
+
+            ERRORS=$(grep -c "<error " target/checkstyle-result.xml)
+
+            if [ "$ERRORS" -eq 0 ]; then
+              COLOR="green"
+              MESSAGE="Passing"
+            else
+              COLOR="red"
+              MESSAGE="$ERRORS errors"
+            fi
+
+            curl -s "https://img.shields.io/badge/Checkstyle-$MESSAGE-$COLOR.svg" -o checkstyle-badge.svg
+      - store_artifacts:
+          path: checkstyle-badge.svg
+          destination: badges
+      - store_artifacts:
+          path: target/checkstyle-result.xml
+          destination: reports/checkstyle
+
 workflows:
   build-and-test:
     jobs:
