@@ -79,7 +79,6 @@ jobs:
             git add .
             git commit -m "Update Javadoc"
             git push https://$GITHUB_TOKEN@github.com/MejaiWajdi/ceri-m1-techniques-de-test.git gh-pages
-
 workflows:
   build-and-test:
     jobs:
