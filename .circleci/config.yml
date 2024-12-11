@@ -31,34 +31,12 @@ jobs:
       - codecov/upload:
           file: target/site/jacoco/jacoco.xml
       - run:
-          name: Generate Checkstyle Badge from GitHub
-          command: |
-            CHECKSTYLE_URL="https://raw.githubusercontent.com/MejaiWajdi/ceri-m1-techniques-de-test/master/target/checkstyle-result.xml"
-            
-            # Vérifier si le fichier existe sur GitHub
-            if ! curl --output /dev/null --silent --head --fail "$CHECKSTYLE_URL"; then
-              echo "Checkstyle result file not found on GitHub!"
-              exit 1
-            fi
-            
-            # Compter les erreurs directement depuis l'URL
-            ERRORS=$(curl -s "$CHECKSTYLE_URL" | grep -c "<error ")
-            
-            # Définir les couleurs et messages pour le badge
-            if [ "$ERRORS" -eq 0 ]; then
-              COLOR="green"
-              MESSAGE="Passing"
-            else
-              COLOR="red"
-              MESSAGE="$ERRORS errors"
-            fi
-            
-            # Générer le badge avec shields.io
-            curl -s "https://img.shields.io/badge/Checkstyle-$MESSAGE-$COLOR.svg" -o checkstyle-badge.svg
+          name: Generate Checkstyle Badge
+          command: ./generate-badge.sh
       - store_artifacts:
           path: checkstyle-badge.svg
           destination: checkstyle-badge
-
+#Configurer Codecov dans CircleCI
 workflows:
   build-and-test:
     jobs:
