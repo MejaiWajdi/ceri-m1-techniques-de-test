@@ -42,7 +42,31 @@ jobs:
       - run:
           name: upload_badge_to_github
           command: bash ./upload-badge-to-github.sh
-
+  generate-docs:
+    docker:
+      - image: cimg/openjdk:17.0
+    steps:
+      - checkout
+      - run:
+          name: Generate Javadoc
+          command: mvn javadoc:javadoc
+      - run:
+          name: Configure Git for GitHub Pages
+          command: |
+            git config --global user.email "your-email@example.com"
+            git config --global user.name "Your Name"
+      - run:
+          name: Deploy Javadoc to GitHub Pages
+          command: |
+            mkdir -p output
+            mv target/site/apidocs/* output/
+            git clone --branch gh-pages https://$GITHUB_TOKEN@github.com/MejaiWajdi/ceri-m1-techniques-de-test.git gh-pages
+            cd gh-pages
+            rm -rf *
+            mv ../output/* .
+            git add .
+            git commit -m "Update Javadoc"
+            git push origin gh-pages
 workflows:
   build-and-test:
     jobs:
