@@ -39,9 +39,14 @@ jobs:
       - store_artifacts:
           path: checkstyle-badge.svg
           destination: ./checkstyle-badge
-
+      - run:
+          name: Upload Badge to GitHub
+          command: bash ./upload-badge-to-github.sh
 
 workflows:
   build-and-test:
     jobs:
       - test-java
+      - upload-badge-to-github:
+          requires:
+            - test-java
