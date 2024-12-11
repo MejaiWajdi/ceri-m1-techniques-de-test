@@ -40,6 +40,7 @@ jobs:
           path: checkstyle-badge.svg
           destination: checkstyle-badge
 
+
 workflows:
   build-and-test:
     jobs:
