@@ -27,7 +27,7 @@
                 </executions>
                 <configuration>
                     <configLocation>checkstyle.xml</configLocation> <!-- Votre fichier de configuration Checkstyle -->
-                    <encoding>UTF-8</encoding>
+
                     <consoleOutput>true</consoleOutput>
                     <failsOnError>true</failsOnError>
                     <!-- Générer un rapport dans le dossier target -->
