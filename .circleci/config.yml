@@ -66,9 +66,10 @@ jobs:
             mv ../output/* .
             git add .
             git commit -m "Update Javadoc"
-            git push origin gh-pages
+            git push https://$GITHUB_TOKEN@github.com/MejaiWajdi/ceri-m1-techniques-de-test.git gh-pages
 workflows:
   build-and-test:
     jobs:
       - test-java
+      - generate-docs
 
