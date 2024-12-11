@@ -40,13 +40,13 @@ jobs:
           path: checkstyle-badge.svg
           destination: ./checkstyle-badge
       - run:
-          name: Upload Badge to GitHub
+          name: upload_badge_to_github
           command: bash ./upload-badge-to-github.sh
 
 workflows:
   build-and-test:
     jobs:
       - test-java
-      - upload-badge-to-github:
+      - upload_badge_to_github:
           requires:
             - test-java
