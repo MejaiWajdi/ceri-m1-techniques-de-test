@@ -33,7 +33,7 @@ jobs:
       - run:
           name: Generate Checkstyle Badge from GitHub
           command: |
-            CHECKSTYLE_URL="https://github.com/MejaiWajdi/ceri-m1-techniques-de-test/blob/master/target/checkstyle-result.xml"
+            CHECKSTYLE_URL="https://raw.githubusercontent.com/MejaiWajdi/ceri-m1-techniques-de-test/master/target/checkstyle-result.xml"
             
             # Vérifier si le fichier existe sur GitHub
             if ! curl --output /dev/null --silent --head --fail "$CHECKSTYLE_URL"; then
