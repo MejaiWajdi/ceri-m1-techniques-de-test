@@ -9,6 +9,7 @@
 
 ![!Couverture de Test](https://codecov.io/gh/MejaiWajdi/ceri-m1-techniques-de-test/graph/badge.svg?)
 ![Checkstyle Badge](https://raw.githubusercontent.com/MejaiWajdi/ceri-m1-techniques-de-test/main/images/checkstyle-badge.svg)
+[![Javadoc](https://img.shields.io/badge/javadoc-online-blue)](https://mejaiwajdi.github.io/ceri-m1-techniques-de-test/fr/univavignon/pokedex/api/package-summary.html)
 
 
 
