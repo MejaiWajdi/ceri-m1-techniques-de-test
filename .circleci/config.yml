@@ -38,7 +38,7 @@ jobs:
           command: bash ./generate-badge.sh
       - store_artifacts:
           path: checkstyle-badge.svg
-          destination: checkstyle-badge
+          destination: ./checkstyle-badge
 
 
 workflows:
