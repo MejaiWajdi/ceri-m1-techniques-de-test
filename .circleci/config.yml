@@ -47,6 +47,4 @@ workflows:
   build-and-test:
     jobs:
       - test-java
-      - upload_badge_to_github:
-          requires:
-            - test-java
+
