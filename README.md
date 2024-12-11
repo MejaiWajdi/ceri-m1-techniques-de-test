@@ -8,6 +8,7 @@
 ![Statut CircleCI](https://circleci.com/gh/MejaiWajdi/ceri-m1-techniques-de-test/tree/master.svg?style=svg)
 
 ![!Couverture de Test](https://codecov.io/gh/MejaiWajdi/ceri-m1-techniques-de-test/graph/badge.svg?)
+[![Checkstyle Badge](https://raw.githubusercontent.com/MejaiWajdi/ceri-m1-techniques-de-test/main/images/checkstyle-badge.svg)](https://github.com/MejaiWajdi/ceri-m1-techniques-de-test/actions?query=workflow%3A%22build-and-test%22)
 
 
 
