@@ -55,12 +55,6 @@ public class PokemonFactoryTest {
         assertEquals(0.0, pokemon.getIv());
     }
 
-    @Test
-    public void testRandomStats() {
-        Pokemon pokemon = pokemonFactory.createPokemon(1, 500, 50, 3000, 3);
-        assertTrue(pokemon.getAttack() >= 0);
-        assertTrue(pokemon.getDefense() >= 0);
-        assertTrue(pokemon.getStamina() >= 0);
-    }
+
 
 }

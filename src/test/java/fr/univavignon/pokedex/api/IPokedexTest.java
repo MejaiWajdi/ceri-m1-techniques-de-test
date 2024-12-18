@@ -27,39 +27,31 @@ public class IPokedexTest {
 
     @Test
     public void testSize() {
-        // Simuler la taille du pokedex
         when(pokedex.size()).thenReturn(1);
 
-        // Vérifier que la méthode retourne bien la taille attendue
         assertEquals(1, pokedex.size());
     }
 
     @Test
     public void testAddPokemon() {
-        // Simuler l'ajout d'un Pokémon et son index
         when(pokedex.addPokemon(pokemon)).thenReturn(0);
 
-        // Vérifier que le pokémon est bien ajouté et que l'index est correct
         int index = pokedex.addPokemon(pokemon);
         assertEquals(0, index);
     }
 
     @Test
     public void testGetPokemon() throws PokedexException {
-        // Simuler la récupération d'un Pokémon par son identifiant
         when(pokedex.getPokemon(0)).thenReturn(pokemon);
 
-        // Vérifier que le pokémon retourné est bien celui attendu
         Pokemon retrievedPokemon = pokedex.getPokemon(0);
         assertEquals(pokemon, retrievedPokemon);
     }
 
     @Test
     public void testGetPokemonWithInvalidIdThrowsException() throws PokedexException {
-        // Simuler une exception pour un identifiant invalide
         when(pokedex.getPokemon(-1)).thenThrow(new PokedexException("Invalid ID"));
 
-        // Vérifier que l'exception est bien levée pour un ID invalide
         assertThrows(PokedexException.class, () -> {
             pokedex.getPokemon(-1);
         });
