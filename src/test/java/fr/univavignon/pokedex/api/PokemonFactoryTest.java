@@ -11,12 +11,12 @@ public class PokemonFactoryTest {
 
     @BeforeEach
     public void setUp() {
-        pokemonFactory = new PokemonFactory();
+        pokemonFactory = new RocketPokemonFactory();
     }
 
     @Test
     public void testCreatePokemon() {
-        Pokemon pokemon = pokemonFactory.createPokemon(0, 500, 50, 3000, 3);
+        Pokemon pokemon = pokemonFactory.createPokemon(1, 500, 50, 3000, 3);
         assertNotNull(pokemon);
         assertEquals("Bulbasaur", pokemon.getName());
         assertEquals(500, pokemon.getCp());

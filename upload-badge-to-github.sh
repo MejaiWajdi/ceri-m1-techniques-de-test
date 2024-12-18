@@ -4,7 +4,7 @@
 BADGE_PATH="checkstyle-badge.svg"
 BADGE_URL="https://raw.githubusercontent.com/MejaiWajdi/ceri-m1-techniques-de-test/main/images/checkstyle-badge.svg"
 GITHUB_REPO="MejaiWajdi/ceri-m1-techniques-de-test"  # Votre dépôt GitHub
-BRANCH="main"  # Branche vers laquelle vous souhaitez pousser l'image
+BRANCH="master"  # Branche vers laquelle vous souhaitez pousser l'image
 
 # Créer un dossier images s'il n'existe pas
 mkdir -p images
