@@ -15,7 +15,6 @@ public class RocketPokemonFactory implements IPokemonFactory {
         aMap.put(-1, "Ash's Pikachu");
         aMap.put(0, "MISSINGNO");
         aMap.put(1, "Bulbasaur");
-        //TODO : Gotta map them all !
         index2name = UnmodifiableMap.unmodifiableMap(aMap);
     }
 
