@@ -8,7 +8,7 @@
 ![Statut CircleCI](https://circleci.com/gh/MejaiWajdi/ceri-m1-techniques-de-test/tree/master.svg?style=svg)
 
 ![!Couverture de Test](https://codecov.io/gh/MejaiWajdi/ceri-m1-techniques-de-test/graph/badge.svg?)
-![Checkstyle Badge](https://raw.githubusercontent.com/MejaiWajdi/ceri-m1-techniques-de-test/main/images/checkstyle-badge.svg)
+![Checkstyle Badge](https://raw.githubusercontent.com/MejaiWajdi/ceri-m1-techniques-de-test/master/images/checkstyle-badge.svg)
 [![Javadoc](https://img.shields.io/badge/javadoc-online-blue)](https://mejaiwajdi.github.io/ceri-m1-techniques-de-test/fr/univavignon/pokedex/api/package-summary.html)
 
 
@@ -26,3 +26,9 @@ Ce projet est une API pour un Pokedex, inspiré de l'univers Pokémon. L'API per
 - **`PokedexFactory`** : Crée des instances de Pokédex en utilisant un `PokemonMetadataProvider` et un `PokemonFactory`.
 - **`PokemonTrainer`** : Représente un dresseur avec un nom, une équipe et un Pokédex associé.
 - **`PokemonTrainerFactory`** : Permet de créer des objets `PokemonTrainer` avec des équipes spécifiques.
+
+
+## Qualité du Code
+- Tests unitaires : Couverture complète grâce à JaCoCo.
+- Style de code : Analyse syntaxique réalisée avec Checkstyle.
+- Documentation : Javadoc générée et disponible en ligne.
