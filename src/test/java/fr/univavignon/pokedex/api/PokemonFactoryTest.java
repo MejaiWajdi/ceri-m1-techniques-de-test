@@ -62,4 +62,5 @@ public class PokemonFactoryTest {
         assertTrue(pokemon.getDefense() >= 0);
         assertTrue(pokemon.getStamina() >= 0);
     }
+
 }
